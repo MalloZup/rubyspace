@@ -1,7 +1,7 @@
 #! /usr/bin/ruby
 require 'xmlrpc/client'
 
-@TESTHOST = "head-suma3pg.mgr.suse"
+@TESTHOST = "TEST"
 @SATELLITE_URL = "http://#{TESTHOST}/rpc/api"
 @SATELLITE_LOGIN = "admin"
 @SATELLITE_PASSWORD = "admin"
