@@ -1,12 +1,5 @@
-sudo: false
 language: ruby
-gemfile:
-  - Gemfile.checks
-rvm:
-  - 2.3.0
-before_install: gem update --remote bundler
 install:
-  - bundle install --retry=3
+- gem install rake ffi minitest rubocop
 script:
-  - bundle exec rubocop
-
+- rubocop
