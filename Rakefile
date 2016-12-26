@@ -1,9 +1,8 @@
 require 'rubygems'
 require 'bundler'
-require 'rubocop/rake_task'
 
 task :lint do
-  RuboCop::RakeTask.new
+  sh 'rubocop'
 end
 
 task :default => [:lint]
