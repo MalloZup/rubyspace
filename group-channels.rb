@@ -60,7 +60,7 @@ def main()
 #  Channel.setBaseChannel("sles12-sp1-pool-x86_64", sys_id)
   # Action list for all sys
 #  puts Schedule.listInProgAction()
-#  @client.call('auth.logout', @key)
+  @client.call('auth.logout', @key)
 end
 
 main()
