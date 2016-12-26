@@ -5,4 +5,3 @@ rvm:
 before_install: 
 - gem update --remote bundler
 - gem install rake ffi minitest rubocop
-
