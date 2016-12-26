@@ -1,7 +1,7 @@
 #! /usr/bin/ruby
 require 'xmlrpc/client'
 
-TESTHOST = ...
+TESTHOST = "".freeze
 MINION = "head-minsles12sp1.tf.local"
 
 @SATELLITE_URL = "http://#{TESTHOST}/rpc/api"
@@ -63,4 +63,4 @@ def main()
   @client.call('auth.logout', @key)
 end
 
-main()
+main
