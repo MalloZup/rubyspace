@@ -1,8 +1,7 @@
 require 'rubygems'
 require 'bundler'
+task :default => [:lint]
 
 task :lint do
-  sh 'rubocop'
+  sh 'rubocop *.rb'
 end
-
-task :default => [:lint]
