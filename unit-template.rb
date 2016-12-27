@@ -26,4 +26,3 @@ class SimpleTest < Minitest::Test
     assert_equal('you are the best.', ex.message)
   end
 end
-puts '########TESTING###########'
