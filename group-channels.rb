@@ -1,7 +1,7 @@
 #! /usr/bin/ruby
 require 'xmlrpc/client'
 
-TESTHOST = 'INSERT_HOST'.freeze
+TESTHOST = 'headref-suma3pg.mgr.suse.de'.freeze
 MINION = 'head-minsles12sp1.tf.local'.freeze
 
 @space_url = "http://#{TESTHOST}/rpc/api"
@@ -33,6 +33,13 @@ def sync_repo(channel_label)
   @client.call('channel.software.syncRepo', @key, channel_label)
 end
 
+def sync_all_repos
+  repos = list_all_channels
+  repos.each do |repo|
+    puts @client.call('channel.software.syncRepo', @key, repo['label'])
+  end
+end
+
 # list systems
 def list_systems
   @client.call('system.listSystems', @key)
@@ -53,7 +60,8 @@ def list_inprog_action
 end
 
 def main
-  puts list_systems
+  sync_all_repos
+  ##  sync_all_repos
   #  sys_id = System.get_systemid_bynameMINION)
   #  Channel.setBaseChannel("sles12-sp1-pool-x86_64", sys_id)
   # Action list for all sys
