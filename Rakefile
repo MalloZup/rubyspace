@@ -4,5 +4,5 @@ task :default => [:lint]
 
 task :lint do
   gem 'rubocop'
-  sh 'rubocop *.rb'
+  sh 'rubocop test/*.rb'
 end
