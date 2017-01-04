@@ -3,7 +3,7 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 
-# This make a nice ProgressBar, and Junit report for jenkins.
+# This make a nice ProgressBar, and Junit report for jenkins
 Minitest::Reporters.use! [Minitest::Reporters::ProgressReporter.new, Minitest::Reporters::JUnitReporter.new]
 
 # Some doc on ruby unitesting.
