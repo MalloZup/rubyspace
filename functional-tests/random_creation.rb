@@ -31,10 +31,13 @@ class Randomize < Auth
       @@client.call('systemgroup.create', @@key, name, desc)
     end
   end
-
-  def multi_login(n)
-    puts "test!"
+ 
+  def tasko_test
+     # ary = ["BaseChanne"]
+     # scheduleSingleRepoSync(Channel chan, User user)
+     puts @@client.call('api.getApiNamespaceCallList', @@key, "taskomatic")
   end
+
 end 
 
 number = 1000
@@ -42,5 +45,5 @@ number = 1000
 xmlrpc_client = Auth.new($space_url, $space_login, $space_pwd)
 xmlrpc_client.genkey
 t = Randomize.new
-t.create_sysgroup(10)
-
+t.create_sysgroup(20)
+t.create_users(40)
